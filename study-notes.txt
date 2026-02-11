@@ -1,0 +1,43 @@
+#### ELEMENETS ######################
+state
+- application memory.
+
+nodes
+-individual functions.
+
+graph
+- how different tasks (nodes) are connected and executed.
+
+edge
+- connection between nodes.
+
+conditional edge
+- specialized connections.
+
+start node
+- workflow begins.
+- doesn't perform any operation.
+
+end node
+
+tools
+- specialized functions.
+e.g. fetching data from an API.
+
+ToolNode
+- special node to run a tool.
+
+StateGraph
+- a class used to build and compile the graph structure.
+
+runnable
+- executable component to perform a specific task in workflow.
+
+messages
+- human - input from user
+- system - context to the model, instructions.
+- ai - response from model.
+- function - result of a function call.
+- tool - result of a tool usage.
+
+
