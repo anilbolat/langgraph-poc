@@ -33,7 +33,7 @@ def multiply(a: int, b: int) -> int:
 
 tools = [add, subtract, multiply]
 
-llm = ChatGoogleGenerativeAI(model = "gemini-2.5-flash-lite")
+llm = ChatGoogleGenerativeAI(model = "gemini-2.5-flash-lite").bind_tools(tools)
 
 def model_call(state: AgentState) -> AgentState:
     system_promt = SystemMessage(
@@ -91,5 +91,5 @@ def print_stream(stream):
         else:
             message.pretty_print()
 
-inputs = {"messages": [("user", "Add 14 + 22")]}
+inputs = {"messages": [("user", "Add 14 + 22 and then multiply the result by 3.")]}
 print_stream(app.stream(inputs, stream_mode="values"))
