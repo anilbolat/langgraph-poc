@@ -1,6 +1,7 @@
 *.pem
 .ghcr
 .env
+conversation_history.txt
 
 #########
 target/

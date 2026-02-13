@@ -40,4 +40,20 @@ messages
 - function - result of a function call.
 - tool - result of a tool usage.
 
+add_messages ( from langgraph.graph.message import add_messages)
+--- Reducer function
+    - Rule that controls how updates from nodes are combined with the existing state.
+    - Tells us how to merge new data into the current state.
 
+    - Without a reducer, updates would have replaced the existing value entirely!
+
+
+############ types
+
+Annotated
+- provides additional context without affecting the type itself.
+- email = Annotated[str, "this has to be a valid email format!]
+
+
+Sequence
+- to automatically handle the state updates for sequences such as by adding new messgaes to a chat history.
