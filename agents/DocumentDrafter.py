@@ -44,6 +44,8 @@ def drafter_node(state: AgentState) -> AgentState:
     response = llm.invoke(all_message)
     print(f"\n🤖 AI: {response.content}")
 
+#    print(f"\n\n\nALL MSGS: {state['messages']}\n\n\n")
+
     if hasattr(response, "tool_calls") and response.tool_calls:
         print(f"🔧 USING TOOLS: {[tc['name'] for tc in response.tool_calls]}")
 
